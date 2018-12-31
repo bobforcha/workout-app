@@ -35,6 +35,7 @@
               <li><%= link_to "Sign in", new_user_session_path %></li>
 
               <% if user_signed_in? %>
+                <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
                 <div class="navbar-right">
                   <p class="navber-text">Signed in as <%= "#{current_user.email}" %></p>
                 </div>
@@ -45,15 +46,17 @@
       </nav>
     </header>
 
-    <div class="row">
-      <div class="col-md-12">
-        <% flash.each do |key, message| %>
-          <div class="text-center alert alert-<%= key == 'notice' ? 'success' : 'danger' %>">
-            <%= message %>
-          </div>
-        <% end %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <% flash.each do |key, message| %>
+            <div class="text-center alert alert-<%= key == 'notice' ? 'success' : 'danger' %>">
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
+        <%= yield %>
       </div>
-      <%= yield %>
     </div>
   </body>
 </html>
