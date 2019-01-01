@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Creating exercise', js: true do
-  let(:john)      { User.create(email: 'john@example.com', password: 'password') }
-  let(:exercise)  { Exercise.create(duration: 70, details: 'Weight lifting', activity_date: '2018-07-26') }
+  let!(:john)      { User.create(email: 'john@example.com', password: 'password') }
 
   before do
     login_as john
@@ -26,7 +25,8 @@ RSpec.feature 'Creating exercise', js: true do
       click_button 'Create Exercise'
     end
 
-    it "successfully creates the record" do
+    fit "successfully creates the record" do
+      exercise = Exercise.last
       expect(page).to have_content('Exercise has been created')
       expect(current_path).to eq(user_exercise_path(john, exercise))
       expect(exercise.user_id).to eq(john.id)
