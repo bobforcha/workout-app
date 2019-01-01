@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature "Hiding signin link", js: true do
   let(:john)  { User.create(email: 'john@example.com', password: 'password') }

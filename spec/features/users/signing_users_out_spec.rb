@@ -1,4 +1,4 @@
-require 'spec_helper.rb'
+require 'rails_helper'
 
 RSpec.feature "Signing users out", js: true do
   let(:john)  { User.create(email: 'john@example.com', password: 'password') }
