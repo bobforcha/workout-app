@@ -25,11 +25,27 @@ RSpec.feature 'Creating exercise', js: true do
       click_button 'Create Exercise'
     end
 
-    fit "successfully creates the record" do
+    it "successfully creates the record" do
       exercise = Exercise.last
       expect(page).to have_content('Exercise has been created')
       expect(current_path).to eq(user_exercise_path(john, exercise))
       expect(exercise.user_id).to eq(john.id)
+    end
+  end
+
+  context 'with invalid inputs' do
+    before do
+      fill_in 'Duration', with: ""
+      fill_in 'Workout Details', with: ""
+      fill_in 'Activity date', with: ""
+      click_button 'Create Exercise'
+    end
+
+    it 'renders the new exercise page with appropriate error message' do
+      expect(page).to have_content("Exercise has not been created")
+      expect(page).to have_content("Duration is not a number")
+      expect(page).to have_content("Details can't be blank")
+      expect(page).to have_content("Activity date can't be blank")
     end
   end
 end
