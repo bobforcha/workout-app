@@ -7,7 +7,7 @@ RSpec.feature 'Listing Exercises', js: true do
     login_as john
   end
 
-  fcontext 'when exercises are created' do
+  context 'when exercises are created' do
     let!(:e1)   { john.exercises.create(duration: 20, details: "My body building activity", activity_date: 2.days.ago) }
     let!(:e2)   { john.exercises.create(duration: 55, details: "Weight lifting", activity_date: 2.days.ago) }
     let!(:e3)   { john.exercises.create(duration: 30, details: "Squats", activity_date: 8.days.ago) }
@@ -30,7 +30,7 @@ RSpec.feature 'Listing Exercises', js: true do
     end
   end
 
-  fcontext 'when no exercises are created' do
+  context 'when no exercises are created' do
     it "shows no workouts" do
       visit root_path
       click_link 'My Lounge'

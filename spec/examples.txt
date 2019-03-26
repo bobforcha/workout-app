@@ -1,12 +1,12 @@
 example_id                                                      | status | run_time        |
 --------------------------------------------------------------- | ------ | --------------- |
-./spec/features/creating_homepage_spec.rb[1:1]                  | passed | 0.8397 seconds  |
-./spec/features/exercises/creating_exercise_spec.rb[1:1:1]      | passed | 0.23593 seconds |
-./spec/features/exercises/creating_exercise_spec.rb[1:2:1]      | passed | 0.5457 seconds  |
-./spec/features/exercises/creating_exercise_spec.rb[1:3:1]      | passed | 0.59182 seconds |
-./spec/features/exercises/listing_exercises_spec.rb[1:1:1]      | passed | 0.36098 seconds |
-./spec/features/exercises/listing_exercises_spec.rb[1:2:1]      | passed | 0.90741 seconds |
-./spec/features/users/hiding_signin_signup_links_spec.rb[1:1:1] | passed | 0.44982 seconds |
-./spec/features/users/signing_users_in_spec.rb[1:1]             | passed | 0.50763 seconds |
-./spec/features/users/signing_users_out_spec.rb[1:1]            | passed | 0.54541 seconds |
-./spec/features/users/signing_users_up_spec.rb[1:1]             | passed | 0.48354 seconds |
+./spec/features/creating_homepage_spec.rb[1:1]                  | passed | 0.10405 seconds |
+./spec/features/exercises/creating_exercise_spec.rb[1:1:1]      | passed | 0.84522 seconds |
+./spec/features/exercises/creating_exercise_spec.rb[1:2:1]      | passed | 0.47623 seconds |
+./spec/features/exercises/creating_exercise_spec.rb[1:3:1]      | passed | 0.48274 seconds |
+./spec/features/exercises/listing_exercises_spec.rb[1:1:1]      | passed | 0.33294 seconds |
+./spec/features/exercises/listing_exercises_spec.rb[1:2:1]      | passed | 0.10565 seconds |
+./spec/features/users/hiding_signin_signup_links_spec.rb[1:1:1] | passed | 0.33504 seconds |
+./spec/features/users/signing_users_in_spec.rb[1:1]             | passed | 0.29359 seconds |
+./spec/features/users/signing_users_out_spec.rb[1:1]            | failed | 0.84181 seconds |
+./spec/features/users/signing_users_up_spec.rb[1:1]             | passed | 0.37008 seconds |
