@@ -8,11 +8,13 @@ RSpec.feature 'Deleting exercise', js: true do
 
   before { login_as owner }
 
-  fit 'successfully deletes the exercise' do
+  it 'successfully deletes the exercise' do
     visit root_path
     click_link "My Lounge"
 
-    find(:xpath, link).click
+    accept_alert do
+      find(:xpath, link).click
+    end
 
     expect(page).to have_content("Exercise has been deleted")
   end
