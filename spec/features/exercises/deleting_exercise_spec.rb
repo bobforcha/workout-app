@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Deleting exercise', js: true do
-  let!(:owner)          { User.create(email: 'owner@example.com', password: 'password') }
+  let!(:owner)          { User.create(first_name: 'John', last_name: 'Doe', email: 'owner@example.com', password: 'password') }
   let!(:owner_exercise) { owner.exercises.create(duration: 48, details: "My body building activity", activity_date: Date.today) }
   let!(:path)           { "/users/#{owner.id}/exercises/#{owner_exercise.id}" }
   let!(:link)           { "//a[contains(@href,\'#{path}\') and .//text()='Destroy']" }

@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.feature "Signing users out", js: true do
-  let!(:john)  { User.create(email: 'john@example.com', password: 'password') }
+  let!(:john)  { User.create(first_name: 'John', last_name: 'Doe', email: 'john@example.com', password: 'password') }
 
   before do
     login_as john
   end
 
-  xit 'successfully signs the user out' do
+  it 'successfully signs the user out' do
     visit root_path
     click_link 'Sign out'
 

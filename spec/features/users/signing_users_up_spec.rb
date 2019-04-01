@@ -6,7 +6,7 @@ RSpec.feature "User signup", js: true do
     click_link 'Sign up'
   end
 
-  fscenario "with valid credentials" do
+  scenario "with valid credentials" do
     fill_in 'First name', with: 'John'
     fill_in 'Last name', with: 'Doe'
     fill_in "Email", with: "john@example.com"
@@ -20,7 +20,7 @@ RSpec.feature "User signup", js: true do
     expect(page).to have_content('John Doe')
   end
 
-  fscenario "with invalid credentials" do
+  scenario "with invalid credentials" do
     fill_in 'First name', with: ''
     fill_in 'Last name', with: ''
     fill_in "Email", with: "john@example.com"

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Listing Exercises', js: true do
-  let!(:john) { User.create(email: 'john@example.com', password: 'password') }
+  let!(:john) { User.create(first_name: 'John', last_name: 'Doe', email: 'john@example.com', password: 'password') }
 
   before do
     login_as john
