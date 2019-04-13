@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Listing Exercises', js: true do
   let!(:john) { User.create(first_name: 'John', last_name: 'Doe', email: 'john@example.com', password: 'password') }
+  let!(:sarah) { User.create(first_name: 'Sarah', last_name: 'Anderson', email: 'sarah@example.com', password: 'password') }
 
   before do
     login_as john
@@ -29,6 +30,19 @@ RSpec.feature 'Listing Exercises', js: true do
       expect(exercise_table).not_to have_content(e3.duration)
       expect(exercise_table).not_to have_content(e3.details)
       expect(exercise_table).not_to have_content(e3.activity_date)
+    end
+
+    context "and a friend is followed" do
+      let!(:following)  { Friendship.create(user: john, friend: sarah) }
+
+      it "shows a list of user's friends" do
+        visit root_path
+        click_link "My Lounge"
+
+        expect(page).to have_content('My Friends')
+        expect(page).to have_link(sarah.full_name)
+        expect(page).to have_link('Unfollow')
+      end
     end
   end
 
