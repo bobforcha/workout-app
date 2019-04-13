@@ -1,17 +1,21 @@
 example_id                                                      | status | run_time        |
 --------------------------------------------------------------- | ------ | --------------- |
-./spec/features/creating_homepage_spec.rb[1:1]                  | passed | 0.13278 seconds |
-./spec/features/dashboard/listing_members_spec.rb[1:1]          | passed | 0.12175 seconds |
-./spec/features/dashboard/searching_for_users_spec.rb[1:1:1]    | passed | 1.21 seconds    |
-./spec/features/exercises/creating_exercise_spec.rb[1:1:1]      | passed | 0.19046 seconds |
-./spec/features/exercises/creating_exercise_spec.rb[1:2:1]      | passed | 0.50969 seconds |
-./spec/features/exercises/creating_exercise_spec.rb[1:3:1]      | passed | 0.51188 seconds |
-./spec/features/exercises/deleting_exercise_spec.rb[1:1]        | passed | 0.23693 seconds |
-./spec/features/exercises/editing_exercise_spec.rb[1:1:1]       | passed | 0.43557 seconds |
-./spec/features/exercises/listing_exercises_spec.rb[1:1:1]      | passed | 0.30746 seconds |
-./spec/features/exercises/listing_exercises_spec.rb[1:2:1]      | passed | 1.19 seconds    |
-./spec/features/users/hiding_signin_signup_links_spec.rb[1:1:1] | passed | 0.34958 seconds |
-./spec/features/users/signing_users_in_spec.rb[1:1]             | passed | 0.40167 seconds |
-./spec/features/users/signing_users_out_spec.rb[1:1]            | passed | 0.14548 seconds |
-./spec/features/users/signing_users_up_spec.rb[1:1]             | passed | 0.59729 seconds |
-./spec/features/users/signing_users_up_spec.rb[1:2]             | passed | 0.52059 seconds |
+./spec/features/creating_homepage_spec.rb[1:1]                  | passed | 0.14377 seconds |
+./spec/features/dashboard/listing_members_spec.rb[1:1]          | passed | 0.12817 seconds |
+./spec/features/dashboard/searching_for_users_spec.rb[1:1:1]    | passed | 0.2357 seconds  |
+./spec/features/exercises/creating_exercise_spec.rb[1:1:1]      | passed | 0.19744 seconds |
+./spec/features/exercises/creating_exercise_spec.rb[1:2:1]      | passed | 0.48273 seconds |
+./spec/features/exercises/creating_exercise_spec.rb[1:3:1]      | passed | 0.55028 seconds |
+./spec/features/exercises/deleting_exercise_spec.rb[1:1]        | passed | 0.26287 seconds |
+./spec/features/exercises/editing_exercise_spec.rb[1:1:1]       | passed | 0.41899 seconds |
+./spec/features/exercises/listing_exercises_spec.rb[1:1:1]      | passed | 0.30149 seconds |
+./spec/features/exercises/listing_exercises_spec.rb[1:2:1]      | passed | 0.16274 seconds |
+./spec/features/following/following_friends_spec.rb[1:1:1:1]    | passed | 0.10958 seconds |
+./spec/features/following/following_friends_spec.rb[1:1:1:2]    | passed | 0.06697 seconds |
+./spec/features/following/following_friends_spec.rb[1:1:1:3]    | failed | 2.14 seconds    |
+./spec/features/following/following_friends_spec.rb[1:1:2:1]    | failed | 2.16 seconds    |
+./spec/features/users/hiding_signin_signup_links_spec.rb[1:1:1] | passed | 1.32 seconds    |
+./spec/features/users/signing_users_in_spec.rb[1:1]             | passed | 0.36024 seconds |
+./spec/features/users/signing_users_out_spec.rb[1:1]            | passed | 0.14978 seconds |
+./spec/features/users/signing_users_up_spec.rb[1:1]             | passed | 0.5723 seconds  |
+./spec/features/users/signing_users_up_spec.rb[1:2]             | passed | 0.57837 seconds |
