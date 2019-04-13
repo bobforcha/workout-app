@@ -4,7 +4,7 @@ RSpec.feature "Following Friends", js: true do
   let!(:john)  { User.create(first_name: "John", last_name: "Doe", email: "john@example.com", password: "password") }
   let!(:peter)  { User.create(first_name: "Peter", last_name: "Corn", email: "peter@example.com", password: "password") }
 
-  context "when signed in" do
+  fcontext "when signed in" do
     before do
       login_as john
       visit "/"
@@ -29,12 +29,9 @@ RSpec.feature "Following Friends", js: true do
     end
 
     context "after following someone" do
-      before do
+      it "no longer shows that person's follow link" do
         follow_link = "a[href='/friendships?friend_id=#{peter.id}']"
         find(follow_link).click
-      end
-
-      it "no longer shows that person's follow link" do
         expect(page).not_to have_link("Follow", href: follow_link)
       end
     end
