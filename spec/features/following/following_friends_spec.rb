@@ -4,7 +4,7 @@ RSpec.feature "Following Friends", js: true do
   let!(:john)  { User.create(first_name: "John", last_name: "Doe", email: "john@example.com", password: "password") }
   let!(:peter)  { User.create(first_name: "Peter", last_name: "Corn", email: "peter@example.com", password: "password") }
 
-  fcontext "when signed in" do
+  context "when signed in" do
     before do
       login_as john
       visit "/"
